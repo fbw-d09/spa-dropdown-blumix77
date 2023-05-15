@@ -6,17 +6,6 @@ const nav = document.querySelectorAll('nav');
 
 const dropdown = document.querySelectorAll('.dropdown');
 
-/* console.log(uList); */
-
-/* console.log(title); */
-
-/* console.log(nav);
-
-console.log(dropdown); */
-/* 
-title.onclick = (title) => {
-    title.target
-} */
 uList.onclick = (event) => {
 
     title.forEach((dropdown) => 
@@ -24,29 +13,16 @@ uList.onclick = (event) => {
       dropdown.children[0].style.display="none";
     
     });
-    
-    if (event.target.nodeName === "LI") {
+
+    if (event.target.nodeName === "LI") { 
+        if (event.target.children[0].style.display==="none") {
         event.target.children[0].style.display="flex";
+        event.target.children[0].style.flexDirection="column";
+        event.target.children[0].style.justifyContent="center";
+    } else {
+        event.target.children[0].style.display = "none";
+    }
     }     
 
 }
 
-
-/* title.onclick = (title) => {
-    title.target
-} */
-
-/* uList.forEach((title) => 
-{
-    title.onclick = (dropdown) => {
-        dropdown.style.display="flex";
-    }
-
-}); */
-
-/* uList.addEventListener('click', () => {
-    dropdown.style.display="flex";
-  
-})
-
- */
